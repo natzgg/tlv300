@@ -2,6 +2,10 @@
 
 ## Clone the Repo
 
+```bash
+git clone https://github.com/natzgg/tlv300.git
+```
+
 Npm install the dependencies
 
 ```bash
