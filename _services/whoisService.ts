@@ -1,9 +1,7 @@
-import config from "@/config";
-
 export const fetchWhoisData = async (domainName: string | null) => {
   try {
     const response = await fetch(
-      `${config.apiUrl}?domainName=${domainName}&apiKey=${config.apiKey}&outputFormat=JSON`
+      `${process.env.NEXT_PUBLIC_WHOIS_API_URL}?domainName=${domainName}&apiKey=${process.env.NEXT_PUBLIC_WHOIS_API_KEY}&outputFormat=JSON`
     );
     if (!response.ok) {
       throw new Error(`Error fetching WHOIS data: ${response.statusText}`);
